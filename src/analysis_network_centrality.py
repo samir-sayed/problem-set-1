@@ -29,6 +29,9 @@ def analyze_network_centrality(movies):
     df = []
 
     with open('imdb_movies_2000to2022.json', 'r') as in_file:
+        #iterate through data, isolate actors and seperate them by first/last name
+        
+        
         for line in in_file:
             this_movie = json.loads(line)
         

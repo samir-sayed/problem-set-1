@@ -8,7 +8,7 @@ from analysis_network_centrality import analyze_network_centrality
 from analysis_similar_actors_genre import analyze_similar_actors_genre
 import requests
 
-# Ingest and save the imbd_movies dataset
+#ingest dataset
 def ingest():
     url = "https://raw.githubusercontent.com/cbuntain/umd.inst414/main/data/imdb_movies_2000to2022.prolific.json"
     response = requests.get(url)
@@ -19,7 +19,7 @@ def ingest():
     
 
 
-# Call functions / instanciate objects from the two analysis .py files
+#call both functions created
 def main():
     ingest()
     with open('data/imdb_movies_2000to2022.prolific.json', 'r') as file:

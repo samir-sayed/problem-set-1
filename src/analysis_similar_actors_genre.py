@@ -52,7 +52,7 @@ def analyze_similar_actors_genre(movies):
     actor_names = actor_genres_df['name']
     actor_genres_df = actor_genres_df.drop(columns=['name'])
 
-    # Select the query actor
+    # Select the query actor.
     query_actor_id = 'nm0001002'  # Dean Cain
 
     # Calculate Cosine distances
@@ -63,7 +63,7 @@ def analyze_similar_actors_genre(movies):
     similar_actors = distances_df[query_actor_id].sort_values()[1:11]
     top_10_actors = actor_names.loc[similar_actors.index]
 
-    # Output the results to a CSV file
+    #
     current_datetime = datetime.now()
     csv_filename = f'data/similar_actors_genre_{current_datetime}.csv'
     top_10_actors.to_csv(csv_filename, header=False)
